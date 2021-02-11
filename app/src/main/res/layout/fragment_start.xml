@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.start.StartFragment">
+
+    <TextView
+        android:id="@+id/textLabel"
+        android:text="@string/start_label"
+        android:textSize="@dimen/app_large_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRoom"
+        android:text="@string/start_btn_room"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        app:layout_constraintTop_toBottomOf="@+id/textLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFirebase"
+        android:text="@string/start_btn_firebase"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        app:layout_constraintTop_toBottomOf="@+id/btnRoom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:visibility="invisible"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_hint"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnFirebase"/>
+
+    <EditText
+        android:id="@+id/inputPassword"
+        android:visibility="invisible"
+        android:inputType="textPassword"
+        android:hint="@string/password_hint"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputEmail"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:visibility="invisible"
+        android:text="@string/start_btn_login"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
